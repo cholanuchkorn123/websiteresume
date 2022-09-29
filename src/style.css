@@ -1,0 +1,35 @@
+@media screen and (max-width: 480px) {
+  .navbar {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .head1 {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+  }
+
+  .home {
+    width: 100vmax;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu {
+    margin: 0;
+  }
+  .head header {
+    height: 1rem;
+  }
+  .page1 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #sechome {
+    margin-left: 0;
+  }
+  .humber {
+    display: block;
+  }
+}
