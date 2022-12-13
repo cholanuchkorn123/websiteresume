@@ -98,7 +98,7 @@ export function Content() {
           css={css`
             width: 400px;
             height: 400px;
-            background-color: #f2f2f2;
+            background-color: #eef8f9;
             margin: 50px;
             margin-top: 120px;
             margin-left:200px;
@@ -109,11 +109,13 @@ export function Content() {
           <div>
             <img
               className="animate__animated animate__pulse"
+              data-aos="fade-up"
+              data-aos-anchor-placement="center-bottom"
               src={profile}
               css={css`
                 width: 100%;
                 height: 400px;
-                background-color: #f2f2f2;
+                background-color: #eef8f9;
                 object-fit: contain;
                 animation-iteration-count: infinite;
               `}

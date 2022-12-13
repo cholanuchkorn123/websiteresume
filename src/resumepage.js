@@ -1,19 +1,23 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-
+import Aos from "aos";
 import { Portfolio } from "./component/portfolio";
 import footer from "./pic/Path 2.png";
 import { Content } from "./component/content";
 import "./style.css";
 import { Topbar } from "./component/topbar";
 import { Footer } from "./component/footer";
+import { useEffect } from "react";
 import { Skill } from "./component/skill";
 export const Resumepage = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <section
       className="home"
       css={css`
-        background-color: #f2f2f2;
+        background-color: #eef8f9;
         width: 100vw;
         height: 100%;
       `}

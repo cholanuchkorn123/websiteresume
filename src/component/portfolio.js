@@ -56,6 +56,8 @@ export function Portfolio() {
           `}
         >
           <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
             css={css`
               width: 300px;
               height: 250px;
@@ -108,6 +110,8 @@ export function Portfolio() {
             </div>
           </div>
           <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
             css={css`
               width: 300px;
               height: 250px;
@@ -160,6 +164,8 @@ export function Portfolio() {
             </div>
           </div>
           <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
             css={css`
               width: 300px;
               height: 250px;

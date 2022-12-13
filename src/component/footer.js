@@ -25,6 +25,7 @@ export function Footer() {
             flex-direction: row;
             height: 100%;
             justify-content: center;
+            padding-top: 120px;
           `}
         >
           <p
@@ -231,7 +232,11 @@ export function Footer() {
                         font-size: 25px;
                         color: #5cb8e4;
                         margin-left: 60px;
+                        cursor: pointer;
                       `}
+                      onClick={() => {
+                        navigator.clipboard.writeText("0992278883");
+                      }}
                     >
                       099-227-8883
                     </p>
