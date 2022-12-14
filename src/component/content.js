@@ -50,44 +50,46 @@ export function Content() {
             <h1>a Full Stack Developer</h1>
           </div>
           <div
+            className="animate__animated  animate__zoomIn"
             css={css`
               font-size: 20px;
               color: #181818;
               margin-top: 10px;
               overflow: hidden;
             
-              white-space: nowrap;
-              margin: 0 auto;
-              letter-spacing: 0.15em;
-              animation: typing 3.5s steps(30, end),
-                blink-caret 0.5s step-end infinite;
-                overflow: hidden;
-               
-                white-space: nowrap;
-                margin: 0 auto;
-                letter-spacing: 0.15em;
-                
-                @keyframes typing {
-                  from {
-                    width: 0;
-                  }
-                  to {
-                    width: 100%;
-                  }
-                }
+            
 
               
                 }
             `}
           >
-            <p>
+            <p
+              css={css`
+                margin-top: 5px;
+              `}
+            >
               I'm interested in learning new things. As a recent graduate from
             </p>
-            <p>the Full-Stack Software Development Bootcamp at TechUp.</p>{" "}
-            <p>
+            <p
+              css={css`
+                margin-top: 5px;
+              `}
+            >
+              the Full-Stack Software Development Bootcamp at TechUp.
+            </p>
+
+            <p
+              css={css`
+                margin-top: 5px;
+              `}
+            >
               I've proficiency in frontend development such as HTML, CSS, React,
-            </p>{" "}
-            <p>
+            </p>
+            <p
+              css={css`
+                margin-top: 5px;
+              `}
+            >
               and backend development. I having continual improvement my coding
               skills.
             </p>
@@ -118,6 +120,7 @@ export function Content() {
                 background-color: #eef8f9;
                 object-fit: contain;
                 animation-iteration-count: infinite;
+                margin-left: 200px;
               `}
             />
           </div>

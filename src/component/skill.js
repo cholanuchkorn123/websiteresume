@@ -2,17 +2,18 @@
 import { css } from "@emotion/react";
 import ff from "../pic/undraw_Wireframing_re_q6k6 1.png";
 
-import expressJS from "../pic/express_logo.png";
-import mongoDB from "../pic/mongo_logo.png";
-import postgreSQL from "../pic/post_logo.png";
-import tailwindCSS from "../pic/tailwind_logo.jpg";
+import expressJS from "../pic/ex1.png";
+import mongoDB from "../pic/mongo1.png";
+import postgreSQL from "../pic/pg.png";
+import tailwindCSS from "../pic/tw1.png";
 import Muilogo from "../pic/mui_logo.png";
 import htmllogo from "../pic/html_logo.png";
-import csslogo from "../pic/css_logo.png";
+import csslogo from "../pic/updatecss.png";
 import gitlogo from "../pic/git_logo.png";
-import javascriptlogo from "../pic/javascript_log.png";
-import nodelogo from "../pic/node_logo.png";
-import reactlogo from "../pic/react_logo.png";
+import javascriptlogo from "../pic/jslogo.png";
+import nodelogo from "../pic/nodeLogo.png";
+import reactlogo from "../pic/react.svg";
+import chakra from "../pic/ck.png";
 export function Skill() {
   return (
     <section id="skill">
@@ -67,7 +68,7 @@ export function Skill() {
           background-color: white;
          display: flex;
           flex-direction: column;
-          justify-content: center; ;
+          justify-content: center;margin-top:30px;margin-left:50px
         }
         `}
             >
@@ -88,6 +89,7 @@ export function Skill() {
                     width: 40px;
                     height: 40px;
                     object-fit: cover;
+                    margin-left: 5px;
                   `}
                 />
                 <p
@@ -97,7 +99,7 @@ export function Skill() {
                     font-size: 20px;
                     color: #89afb6;
                     margin-top: 5px;
-                    margin-left: 45px;
+                    margin-left: 50px;
                   `}
                 >
                   HTML
@@ -128,7 +130,7 @@ export function Skill() {
                     font-size: 20px;
                     color: #89afb6;
                     margin-top: 5px;
-                    margin-left: 50px;
+                    margin-left: 65px;
                   `}
                 >
                   CSS
@@ -147,9 +149,10 @@ export function Skill() {
                 <img
                   src={javascriptlogo}
                   css={css`
-                    width: 30px;
+                    width: 35px;
                     height: 40px;
                     object-fit: cover;
+                    margin-right: 10px;
                   `}
                 />
                 <p
@@ -159,7 +162,7 @@ export function Skill() {
                     font-size: 20px;
                     color: #89afb6;
                     margin-top: 5px;
-                    margin-left: 30px;
+                    margin-left: 20px;
                   `}
                 >
                   Javascript
@@ -209,9 +212,10 @@ export function Skill() {
                 <img
                   src={reactlogo}
                   css={css`
-                    width: 30px;
+                    width: 40px;
                     height: 40px;
                     object-fit: cover;
+                    padding-right: 5px;
                   `}
                 />
                 <p
@@ -221,7 +225,7 @@ export function Skill() {
                     font-size: 20px;
                     color: #89afb6;
                     margin-top: 5px;
-                    margin-left: 30px;
+                    margin-left: 25px;
                   `}
                 >
                   React JS
@@ -246,7 +250,7 @@ export function Skill() {
           background-color: white;
          display: flex;
           flex-direction: column;
-          justify-content: center; ;
+          justify-content: center;margin-top:50px;margin-left:20px
         }
         `}
               >
@@ -262,7 +266,40 @@ export function Skill() {
                 >
                   {" "}
                   <img
-                    src={htmllogo}
+                    src={nodelogo}
+                    css={css`
+                      width: 40px;
+                      height: 40px;
+                      object-fit: cover;
+                      color: white;
+                      margin-left: 10px;
+                    `}
+                  />
+                  <p
+                    css={css`
+                      font-weight: 500;
+
+                      font-size: 20px;
+                      color: #89afb6;
+                      margin-top: 5px;
+                      margin-left: 50px;
+                    `}
+                  >
+                    NodeJS
+                  </p>
+                </div>
+                <div
+                  css={css`
+         
+         display: flex;
+          flex-direction: row;
+          justify-content: start; margin:10px
+        }
+        `}
+                >
+                  {" "}
+                  <img
+                    src={expressJS}
                     css={css`
                       width: 40px;
                       height: 40px;
@@ -276,10 +313,10 @@ export function Skill() {
                       font-size: 20px;
                       color: #89afb6;
                       margin-top: 5px;
-                      margin-left: 45px;
+                      margin-left: 40px;
                     `}
                   >
-                    HTML
+                    Express JS
                   </p>
                 </div>
                 <div
@@ -293,9 +330,9 @@ export function Skill() {
                 >
                   {" "}
                   <img
-                    src={csslogo}
+                    src={mongoDB}
                     css={css`
-                      width: 30px;
+                      width: 40px;
                       height: 40px;
                       object-fit: cover;
                     `}
@@ -307,10 +344,10 @@ export function Skill() {
                       font-size: 20px;
                       color: #89afb6;
                       margin-top: 5px;
-                      margin-left: 50px;
+                      margin-left: 35px;
                     `}
                   >
-                    CSS
+                    Mongo DB
                   </p>
                 </div>
                 <div
@@ -324,9 +361,9 @@ export function Skill() {
                 >
                   {" "}
                   <img
-                    src={javascriptlogo}
+                    src={postgreSQL}
                     css={css`
-                      width: 30px;
+                      width: 40px;
                       height: 40px;
                       object-fit: cover;
                     `}
@@ -338,10 +375,10 @@ export function Skill() {
                       font-size: 20px;
                       color: #89afb6;
                       margin-top: 5px;
-                      margin-left: 30px;
+                      margin-left: 35px;
                     `}
                   >
-                    Javascript
+                    Postgre SQL
                   </p>
                 </div>
                 <div
@@ -355,11 +392,12 @@ export function Skill() {
                 >
                   {" "}
                   <img
-                    src={tailwindCSS}
+                    src={gitlogo}
                     css={css`
-                      width: 30px;
+                      width: 40px;
                       height: 40px;
                       object-fit: cover;
+                      margin-left: 5px;
                     `}
                   />
                   <p
@@ -369,43 +407,87 @@ export function Skill() {
                       font-size: 20px;
                       color: #89afb6;
                       margin-top: 5px;
-                      margin-left: 20px;
+                      margin-left: 65px;
                     `}
                   >
-                    Tailwind CSS
+                    GIT
                   </p>
                 </div>
-                <div
-                  css={css`
+              </div>
+            </div>
+            <div
+              css={css`
+                width: 300px;
+                height: 80%;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                margin-top: 55px;
+              `}
+            >
+              {" "}
+              <div
+                css={css`
          
          display: flex;
           flex-direction: row;
-          justify-content: start; margin:10px
+          justify-content: start; margin-left:3px;margin-top:5px
         }
         `}
-                >
-                  {" "}
-                  <img
-                    src={reactlogo}
-                    css={css`
-                      width: 30px;
-                      height: 40px;
-                      object-fit: cover;
-                    `}
-                  />
-                  <p
-                    css={css`
-                      font-weight: 500;
+              >
+                {" "}
+                <img
+                  src={Muilogo}
+                  css={css`
+                    width: 30px;
+                    height: 40px;
+                    object-fit: cover;
+                  `}
+                />
+                <p
+                  css={css`
+                    font-weight: 500;
 
-                      font-size: 20px;
-                      color: #89afb6;
-                      margin-top: 5px;
-                      margin-left: 30px;
-                    `}
-                  >
-                    React JS
-                  </p>
-                </div>
+                    font-size: 20px;
+                    color: #89afb6;
+                    margin-top: 5px;
+                    margin-left: 30px;
+                  `}
+                >
+                  MUI
+                </p>
+              </div>
+              <div
+                css={css`
+         
+                display: flex;
+                flex-direction: row;
+                justify-content: start; margin:10px:margin-right:25px;margin-top:10px
+        }
+        `}
+              >
+                {" "}
+                <img
+                  src={chakra}
+                  css={css`
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                  `}
+                />
+                <p
+                  css={css`
+                    font-weight: 500;
+
+                    font-size: 20px;
+                    color: #89afb6;
+                    margin-top: 5px;
+                    margin-left: 20px;
+                  `}
+                >
+                  Chakra
+                </p>
               </div>
             </div>
 

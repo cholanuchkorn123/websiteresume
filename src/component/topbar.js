@@ -2,9 +2,10 @@ import humbur from "../pic/Vector (5).png";
 import bgimg from "../pic/Ellipse 1.png";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-
+import { useState } from "react";
 import "animate.css";
 export function Topbar() {
+  const [barbutton, setBarbutton] = useState("about");
   return (
     <>
       <header className="head">
@@ -113,87 +114,242 @@ export function Topbar() {
               margin-left: 750px;
             `}
           >
-            <div
-              className="menu"
-              css={css`
-                margin: 50px;
-                font-size: 25px;
-                color: #8758ff;
-              `}
-            >
-              <a
-                href="#content"
+            {(barbutton == "about" && (
+              <div
+                className="menu"
                 css={css`
-                  color: #566e72;
-                  text-decoration: none;
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #bce2e9;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
                 `}
               >
-                {" "}
-                About
-              </a>
-            </div>
-            <div
-              className="menu"
-              css={css`
-                margin: 50px;
-                font-size: 25px;
-                color: #8758ff;
-              `}
-            >
-              <a
-                href="#skill"
+                <a
+                  href="#content"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("about");
+                  }}
+                >
+                  {" "}
+                  About
+                </a>
+              </div>
+            )) || (
+              <div
+                className="menu"
                 css={css`
-                  color: #566e72;
-                  text-decoration: none;
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #e6f4f7;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
                 `}
               >
-                {" "}
-                Skills
-              </a>
-            </div>
-            <div
-              className="menu"
-              css={css`
-                margin: 50px;
-                font-size: 25px;
-                color: #8758ff;
-              `}
-            >
-              <a
-                href="#portfolio"
+                <a
+                  href="#content"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("about");
+                  }}
+                >
+                  {" "}
+                  About
+                </a>
+              </div>
+            )}
+
+            {(barbutton == "skill" && (
+              <div
                 css={css`
-                  color: #566e72;
-                  text-decoration: none;
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #bce2e9;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
                 `}
               >
-                {" "}
-                Portfolio
-              </a>
-            </div>
-            <div
-              css={css`
-                margin-top: 45px;
-                font-size: 25px;
-                width: 176px;
-                height: 45px;
-                background-color: #bce2e9;
-                border-radius: 25px;
-                text-align: center;
-                color: white;
-                padding-top: 5px;
-              `}
-            >
-              <a
-                href="#footer"
+                <a
+                  href="#skill"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("skill");
+                  }}
+                >
+                  {" "}
+                  Skills
+                </a>
+              </div>
+            )) || (
+              <div
+                className="menu"
                 css={css`
-                  color: #566e72;
-                  text-decoration: none;
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #e6f4f7;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
                 `}
               >
-                {" "}
-                Contact me
-              </a>
-            </div>
+                <a
+                  href="#skill"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("skill");
+                  }}
+                >
+                  {" "}
+                  Skills
+                </a>
+              </div>
+            )}
+            {(barbutton == "portfolio" && (
+              <div
+                className="menu"
+                css={css`
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #bce2e9;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
+                `}
+              >
+                <a
+                  href="#portfolio"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("portfolio");
+                  }}
+                >
+                  {" "}
+                  Portfolio
+                </a>
+              </div>
+            )) || (
+              <div
+                className="menu"
+                css={css`
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #e6f4f7;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
+                `}
+              >
+                <a
+                  href="#portfolio"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("portfolio");
+                  }}
+                >
+                  {" "}
+                  Portfolio
+                </a>
+              </div>
+            )}
+
+            {(barbutton == "footer" && (
+              <div
+                css={css`
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #bce2e9;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
+                `}
+              >
+                <a
+                  href="#footer"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("footer");
+                  }}
+                >
+                  {" "}
+                  Contact me
+                </a>
+              </div>
+            )) || (
+              <div
+                className="menu"
+                css={css`
+                  margin-top: 45px;
+                  font-size: 25px;
+                  width: 176px;
+                  height: 45px;
+                  background-color: #e6f4f7;
+                  border-radius: 25px;
+                  text-align: center;
+                  color: white;
+                  padding-top: 5px;
+                `}
+              >
+                <a
+                  href="#footer"
+                  css={css`
+                    color: #566e72;
+                    text-decoration: none;
+                  `}
+                  onClick={() => {
+                    setBarbutton("footer");
+                  }}
+                >
+                  {" "}
+                  Contact me
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </header>
