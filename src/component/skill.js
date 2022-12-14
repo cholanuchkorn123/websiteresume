@@ -432,7 +432,7 @@ export function Skill() {
          
          display: flex;
           flex-direction: row;
-          justify-content: start; margin-left:3px;margin-top:5px
+          justify-content: start; margin-left:5px;margin-top:5px
         }
         `}
               >

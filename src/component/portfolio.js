@@ -1,15 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import fa from "../pic/SendPay 1.png";
-import sv from "../pic/Ellipse 6 (2).png";
-import av from "../pic/Screenshot (162) 1.png";
-import kk from "../pic/Edtech 1.png";
-import ss from "../pic/e-commerce 1 1.png";
-import rr from "../pic/Ellipse 6 (1).png";
-import ww from "../pic/E- Commerce.png";
-import ssf from "../pic/Ellipse 6.png";
-import sssf from "../pic/Sendpay.png";
+import { useEffect, useState } from "react";
+import video from "../pic/Untitled video - Made with Clipchamp (2).mp4";
+
 export function Portfolio() {
+  let url = window.location.href;
+  let htag = url.split("/")[3];
+  const [readmore, setReadmore] = useState(false);
+  console.log(readmore);
   return (
     <section id="portfolio">
       <section
@@ -28,22 +26,22 @@ export function Portfolio() {
         >
           <p
             css={css`
-              color: #5cb8e4;
+              color: #222c2d;
               font-weight: 700;
-              font-size: 30px;
+              font-size: 50px;
             `}
           >
             My
           </p>
           <p
             css={css`
-              color: #5cb8e4;
+              color: #222c2d;
               font-weight: 400;
               margin-left: 10px;
-              font-size: 30px;
+              font-size: 50px;
             `}
           >
-            Portfolio
+            Projects
           </p>
         </div>
         <main
@@ -55,168 +53,265 @@ export function Portfolio() {
             flex-wrap: wrap;
           `}
         >
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
-            css={css`
-              width: 300px;
-              height: 250px;
-              background-color: white;
-              margin: 50px;
-              margin-top: 50px;
-              border-radius: 25px;
-              box-shadow: 5px 5px 5px 5px #d3dedc;
-              position: relative;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-            `}
-          >
-            <div>
-              <img
-                src={fa}
+          {(readmore && (
+            <div
+              css={css`
+                width: 500px;
+                height: 400px;
+                background-color: #abdbe3;
+                margin: 50px;
+                margin-top: 50px;
+                border-radius: 25px;
+                box-shadow: 5px 5px 5px 5px #d3dedc;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
+              `}
+            >
+              <p
                 css={css`
-                  position: absolute;
-                  z-index: 2;
-                  width: 250px;
-                  height: 150px;
-                  right: 5px;
-                  bottom: 30px;
+                  margin-left: 20px;
+                  font-size: 20px;
+                  cursor: pointer;
                 `}
-              />
-              <img
-                src={ssf}
-                css={css`
-                  position: absolute;
-                  z-index: 1;
-                  width: 190px;
-                  height: 190px;
-                  right: 100px;
-                  bottom: 45px;
-                `}
-              />
-
-              <img
-                src={sssf}
-                css={css`
-                  position: absolute;
-                  z-index: 2;
-                  width: 110px;
-                  height: 25px;
-                  right: 160px;
-                  bottom: 195px;
-                `}
-              />
+                onClick={() => setReadmore("back")}
+              >
+                Back
+              </p>
             </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
-            css={css`
-              width: 300px;
-              height: 250px;
-              background-color: white;
-              margin: 50px;
-              margin-top: 50px;
-              border-radius: 25px;
-              box-shadow: 5px 5px 5px 5px #d3dedc;
-              position: relative;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-            `}
-          >
-            <div>
-              <img
-                src={ss}
+          )) || (
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
                 css={css`
-                  position: absolute;
-                  z-index: 2;
-                  width: 250px;
-                  height: 150px;
-                  right: 5px;
-                  bottom: 30px;
+                  width: 500px;
+                  height: 400px;
+                  background-color: #abdbe3;
+                  margin: 50px;
+                  margin-top: 50px;
+                  border-radius: 25px;
+                  box-shadow: 5px 5px 5px 5px #d3dedc;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
                 `}
-              />
-              <img
-                src={rr}
-                css={css`
-                  position: absolute;
-                  z-index: 1;
-                  width: 190px;
-                  height: 190px;
-                  right: 100px;
-                  bottom: 45px;
-                `}
-              />
+              >
+                <div
+                  css={css`
+                    width: 80%;
+                    height: 60%;
+                    background-color: black;
+                    margin-top: 30px;
+                  `}
+                >
+                  <video
+                    // controls
+                    loop
+                    autoPlay
+                    muted
+                    css={css`
+                      width: 100%;
+                      height: 100%;
+                      cursor: pointer;
+                    `}
+                  >
+                    <source src={video} type="video/mp4" autoPlay />
+                    <a href="" />
+                  </video>
+                </div>
+                <div
+                  css={css`
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
+                    margin: 20px;
+                  `}
+                >
+                  {" "}
+                  <a
+                    css={css`
+                      text-decoration: none;
+                    `}
+                    href="https://github.com/varissara-wo/final-project"
+                  >
+                    <div
+                      css={css`
+                        width: 150px;
+                        height: 50px;
+                        background-color: #d5edf1;
+                        margin-right: 75px;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 5px;
+                        &:hover {
+                          background-color: #bce2e9;
+                        }
+                      `}
+                    >
+                      {" "}
+                      <p
+                        css={css`
+                          font-size: 25px;
+                          color: #44585b;
+                        `}
+                      >
+                        Github
+                      </p>
+                    </div>
+                  </a>
+                  <div
+                    css={css`
+                      width: 150px;
+                      height: 50px;
+                      background-color: #d5edf1;
 
-              <img
-                src={ww}
+                      border-radius: 10px;
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                      margin-top: 5px;
+                      cursor: pointer;
+                      &:hover {
+                        background-color: #bce2e9;
+                      }
+                    `}
+                    onClick={() => setReadmore(true)}
+                  >
+                    {" "}
+                    <p
+                      css={css`
+                        font-size: 25px;
+                        color: #44585b;
+                      `}
+                    >
+                      Read more
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ) ||
+            (readmore === "back" && (
+              <div
                 css={css`
-                  position: absolute;
-                  z-index: 2;
-                  width: 130px;
-                  height: 20px;
-                  right: 140px;
-                  bottom: 200px;
+                  width: 500px;
+                  height: 400px;
+                  background-color: #abdbe3;
+                  margin: 50px;
+                  margin-top: 50px;
+                  border-radius: 25px;
+                  box-shadow: 5px 5px 5px 5px #d3dedc;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
                 `}
-              />
-            </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
-            css={css`
-              width: 300px;
-              height: 250px;
-              background-color: white;
-              margin: 50px;
-              margin-top: 50px;
-              border-radius: 25px;
-              box-shadow: 5px 5px 5px 5px #d3dedc;
-              position: relative;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-            `}
-          >
-            <div>
-              <img
-                src={kk}
-                css={css`
-                  position: absolute;
-                  z-index: 2;
-                  width: 250px;
-                  height: 150px;
-                  right: 5px;
-                  bottom: 30px;
-                `}
-              />
-              <img
-                src={sv}
-                css={css`
-                  position: absolute;
-                  z-index: 1;
-                  width: 190px;
-                  height: 190px;
-                  right: 100px;
-                  bottom: 45px;
-                `}
-              />
+              >
+                <div
+                  css={css`
+                    width: 80%;
+                    height: 60%;
+                    background-color: black;
+                    margin-top: 30px;
+                  `}
+                >
+                  <video
+                    // controls
+                    loop
+                    autoPlay
+                    muted
+                    css={css`
+                      width: 100%;
+                      height: 100%;
+                      cursor: pointer;
+                    `}
+                  >
+                    <source src={video} type="video/mp4" autoPlay />
+                    <a href="" />
+                  </video>
+                </div>
+                <div
+                  css={css`
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
+                    margin: 20px;
+                  `}
+                >
+                  {" "}
+                  <a
+                    css={css`
+                      text-decoration: none;
+                    `}
+                    href="https://github.com/varissara-wo/final-project"
+                  >
+                    <div
+                      css={css`
+                        width: 150px;
+                        height: 50px;
+                        background-color: #d5edf1;
+                        margin-right: 75px;
+                        border-radius: 10px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 5px;
+                        &:hover {
+                          background-color: #bce2e9;
+                        }
+                      `}
+                    >
+                      {" "}
+                      <p
+                        css={css`
+                          font-size: 25px;
+                          color: #44585b;
+                        `}
+                      >
+                        Github
+                      </p>
+                    </div>
+                  </a>
+                  <div
+                    css={css`
+                      width: 150px;
+                      height: 50px;
+                      background-color: #d5edf1;
 
-              <img
-                src={av}
-                css={css`
-                  position: absolute;
-                  z-index: 2;
-                  width: 175px;
-                  height: 40px;
-                  right: 100px;
-                  bottom: 190px;
-                `}
-              />
-            </div>
-          </div>
+                      border-radius: 10px;
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                      margin-top: 5px;
+                      cursor: pointer;
+                      &:hover {
+                        background-color: #bce2e9;
+                      }
+                    `}
+                    onClick={() => setReadmore(true)}
+                  >
+                    {" "}
+                    <p
+                      css={css`
+                        font-size: 25px;
+                        color: #44585b;
+                      `}
+                    >
+                      Read more
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
         </main>
       </section>
     </section>
