@@ -197,6 +197,7 @@ export function Portfolio() {
                         margin-top: 5px;
                         &:hover {
                           background-color: #bce2e9;
+                          scale: 110%;
                         }
                       `}
                     >
@@ -226,6 +227,7 @@ export function Portfolio() {
                       cursor: pointer;
                       &:hover {
                         background-color: #bce2e9;
+                        scale: 110%;
                       }
                     `}
                     onClick={() => setReadmore("content")}
@@ -313,6 +315,7 @@ export function Portfolio() {
                         margin-top: 5px;
                         &:hover {
                           background-color: #bce2e9;
+                          scale: 110%;
                         }
                       `}
                     >
@@ -342,6 +345,7 @@ export function Portfolio() {
                       cursor: pointer;
                       &:hover {
                         background-color: #bce2e9;
+                        scale: 110%;
                       }
                     `}
                     onClick={() => setReadmore("content")}
