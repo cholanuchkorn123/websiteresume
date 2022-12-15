@@ -3,6 +3,7 @@
     margin-left: 0;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
   }
   .head1 {
     display: flex;

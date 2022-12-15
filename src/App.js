@@ -1,12 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Resumepage } from "./resumepage";
+
+import { Resumepages } from "./routes/resume.js";
 function App() {
-  return (
-    <div className="App">
-      <Resumepage />
-    </div>
-  );
+  return <Resumepages />;
 }
 
 export default App;
