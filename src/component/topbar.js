@@ -3,9 +3,11 @@ import bgimg from "../pic/Ellipse 1.png";
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useState } from "react";
+import { useEffect } from "react";
 import "animate.css";
 export function Topbar() {
   const [barbutton, setBarbutton] = useState("about");
+
   return (
     <>
       <header className="head">

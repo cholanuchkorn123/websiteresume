@@ -28,12 +28,13 @@ export const Resumepage = () => {
       <Portfolio />
       <Footer />
       <footer>
-        <img
-          src={footer}
+        <div
           css={css`
             width: 100vw;
+            height: 300px;
+            background-color: #e6f4f7;
           `}
-        />
+        ></div>
       </footer>
     </section>
   );

@@ -3,6 +3,8 @@ import { css } from "@emotion/react";
 import aa from "../pic/124.png";
 import bb from "../pic/555.png";
 import cc from "../pic/github.png";
+import linkedinlogo from "../pic/acv.png";
+import circle from "../pic/Circle_(transparent).png";
 import "./modal.css";
 import ee from "../pic/Vector.png";
 import { useState } from "react";
@@ -18,31 +20,31 @@ export function Footer() {
   }
   return (
     <section id="footer">
-      <section>
+      <section data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <div
           css={css`
             display: flex;
             flex-direction: row;
             height: 100%;
             justify-content: center;
-            padding-top: 120px;
+            padding-top: 180px;
           `}
         >
           <p
             css={css`
-              color: #5cb8e4;
+              color: #222c2d;
               font-weight: 700;
-              font-size: 30px;
+              font-size: 50px;
             `}
           >
             Contact
           </p>
           <p
             css={css`
-              color: #5cb8e4;
+              color: #222c2d;
               font-weight: 400;
               margin-left: 10px;
-              font-size: 30px;
+              font-size: 50px;
             `}
           >
             Me
@@ -61,7 +63,7 @@ export function Footer() {
             css={css`
               width: 300px;
               height: 250px;
-              background-color: #f2f2f2;
+              background-color: #eef8f9;
               margin: 50px;
               margin-top: 50px;
               position: relative;
@@ -106,11 +108,70 @@ export function Footer() {
               <a
                 href="https://github.com/cholanuchkorn123"
                 css={css`
-                  color: #5cb8e4;
+                  color: #566e72;
                   text-decoration: none;
                 `}
               >
                 Github
+              </a>
+            </h1>
+          </div>
+          <div
+            css={css`
+              width: 300px;
+              height: 250px;
+              background-color: #eef8f9;
+              margin: 50px;
+              margin-top: 50px;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: end;
+              align-items: center;
+            `}
+          >
+            {" "}
+            <a
+              href="https://www.linkedin.com/in/cholanuch-kasemtanakitti-8b3202244/"
+              css={css`
+                color: #5cb8e4;
+                text-decoration: none;
+              `}
+            >
+              {" "}
+              <img
+                src={aa}
+                css={css`
+                  position: absolute;
+                  bottom: 100px;
+                  right: 70px;
+                `}
+              />
+              <img
+                src={linkedinlogo}
+                css={css`
+                  position: absolute;
+                  top: 25px;
+                  left: 95px;
+                  width: 35%;
+                  height: 35%;
+                `}
+              />
+            </a>
+            <h1
+              css={css`
+                font-size: 25px;
+                color: #5cb8e4;
+              `}
+            >
+              <a
+                href="https://www.linkedin.com/in/cholanuch-kasemtanakitti-8b3202244/"
+                css={css`
+                  color: #566e72;
+                  text-decoration: none;
+                `}
+              >
+                Linkedin
               </a>
             </h1>
           </div>
@@ -119,7 +180,7 @@ export function Footer() {
             css={css`
               width: 300px;
               height: 250px;
-              background-color: #f2f2f2;
+              background-color: #eef8f9;
               margin: 50px;
               margin-top: 50px;
               position: relative;
@@ -163,7 +224,7 @@ export function Footer() {
               <a
                 href="mailto:cholanuch309651@gmail.com"
                 css={css`
-                  color: #5cb8e4;
+                  color: #566e72;
                   text-decoration: none;
                 `}
               >
@@ -175,7 +236,7 @@ export function Footer() {
             css={css`
               width: 300px;
               height: 250px;
-              background-color: #f2f2f2;
+              background-color: #eef8f9;
               margin: 50px;
               margin-top: 50px;
               position: relative;
@@ -215,9 +276,11 @@ export function Footer() {
                 onClick={togglemodal}
                 css={css`
                   font-size: 25px;
-                  color: #5cb8e4;
+                  color: #566e72;
                   border: none;
                   cursor: pointer;
+                  font-weight: bold;
+                  background-color: #eef8f9;
                 `}
               >
                 {" "}

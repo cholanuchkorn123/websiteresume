@@ -2,11 +2,11 @@
 import { css } from "@emotion/react";
 import { useEffect, useState } from "react";
 import video from "../pic/Untitled video - Made with Clipchamp (2).mp4";
-
+import backbutton from "../pic/backicon.png";
 export function Portfolio() {
   let url = window.location.href;
   let htag = url.split("/")[3];
-  const [readmore, setReadmore] = useState(false);
+  const [readmore, setReadmore] = useState("home");
   console.log(readmore);
   return (
     <section id="portfolio">
@@ -53,7 +53,7 @@ export function Portfolio() {
             flex-wrap: wrap;
           `}
         >
-          {(readmore && (
+          {(readmore === "content" && (
             <div
               css={css`
                 width: 500px;
@@ -69,18 +69,63 @@ export function Portfolio() {
                 align-items: start;
               `}
             >
+              <div
+                css={css`
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: start;
+                  align-items: start;
+                  width: 100%;
+                  height: 90px;
+                `}
+              >
+                {" "}
+                <img
+                  src={backbutton}
+                  css={css`
+                    margin-left: 30px;
+                    margin-top: 40px;
+                    width: 40px;
+                    height: 40px;
+                    cursor: pointer;
+                  `}
+                  onClick={() => setReadmore("back")}
+                ></img>
+                <h1
+                  css={css`
+                    margin-left: 110px;
+                    margin-top: 45px;
+                    font-size: 30px;
+                    color: #334244;
+                  `}
+                >
+                  Get That Job
+                </h1>
+              </div>
               <p
                 css={css`
-                  margin-left: 20px;
-                  font-size: 20px;
-                  cursor: pointer;
+                  margin: 10px;
+                  margin-left: 25px;
+                  margin-bottom: 10px;
+                  color: #334244;
+                  font-weight: bold;
                 `}
-                onClick={() => setReadmore("back")}
               >
-                Back
+                <br /> Get that job is a website for Recruiter finding a
+                candidate and Professional applying a job.
+                <br /> Website Get that job have 2 type of user. First
+                Professional is job seeker and Recruiter.
+                <br /> Feature :
+                <br /> Authentication ,Posting a job
+                <br /> Update professional profile, Get list of jobs,
+                <br /> Get a job details, Search and filter a job, etc.
+                <br />
+                Front-end and Backend: HTML, Material UI, Javascript, React.js,
+                REST APIs, PostgreSQL database, Express.js and Node.JS
               </p>
             </div>
-          )) || (
+          )) ||
+            (readmore === "home" && (
               <div
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"
@@ -116,6 +161,7 @@ export function Portfolio() {
                       height: 100%;
                       cursor: pointer;
                     `}
+                    onClick={() => setReadmore("content")}
                   >
                     <source src={video} type="video/mp4" autoPlay />
                     <a href="" />
@@ -182,7 +228,7 @@ export function Portfolio() {
                         background-color: #bce2e9;
                       }
                     `}
-                    onClick={() => setReadmore(true)}
+                    onClick={() => setReadmore("content")}
                   >
                     {" "}
                     <p
@@ -196,7 +242,7 @@ export function Portfolio() {
                   </div>
                 </div>
               </div>
-            ) ||
+            )) ||
             (readmore === "back" && (
               <div
                 css={css`
@@ -231,6 +277,7 @@ export function Portfolio() {
                       height: 100%;
                       cursor: pointer;
                     `}
+                    onClick={() => setReadmore("content")}
                   >
                     <source src={video} type="video/mp4" autoPlay />
                     <a href="" />
@@ -297,7 +344,7 @@ export function Portfolio() {
                         background-color: #bce2e9;
                       }
                     `}
-                    onClick={() => setReadmore(true)}
+                    onClick={() => setReadmore("content")}
                   >
                     {" "}
                     <p
